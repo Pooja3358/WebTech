@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 8</title>
+    <style>
+        body{
+            background: linear-gradient(45deg, rgb(218, 97, 21),rgb(119, 164, 190),rgb(191, 82, 74));
+        }
+        div{
+            border: 5px solid black;
+            box-shadow: 0 0 20px blue;
+            width:300px;
+            height:300px;
+            margin: 200px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        div>img{
+            width:inherit;
+            height: inherit;
+            filter: grayscale(100%);
+            transition: all 2S linear 1s;
+        }
+        div:hover{
+            cursor: pointer;
+        }
+        div:hover>img{
+            filter: grayscale(10%);
+            transform: scale(1.5,1.5);
+        }
+        div>#curtain{
+            background-color:rgb(2, 55, 55);
+            position: absolute;
+            top:0px;
+            left: 0px;
+            margin: 0px;
+            transition: all 1S linear 0s;
+        }
+        div:hover>#curtain{
+            transform: translateY(-100%);
+        }
+        div>#left-door{
+           background: linear-gradient(45deg,#fec76f,rgb(104, 67, 33),rgb(101, 39, 15));
+           position: absolute;
+           top:0px;
+           right:50%;
+           margin:0px;
+           width:50%;
+           transition:all 1s linear 0s ;
+           transform-origin: left;
+        }
+        div:hover>#left-door{
+            transform: perspective(200px) rotateY(-90deg);
+        }
+        div>#right-door{
+           background: linear-gradient(45deg,#fec76f,rgb(104, 67, 33),rgb(101, 39, 15));
+           position: absolute;
+           top:0px;
+           left:50%;
+           margin:0px;
+           width:50%;
+           transition:all 1s linear 0s ;
+           transform-origin: right ;
+        }
+        div:hover>#right-door{
+            transform: perspective(1000px) rotateY(-90deg);
+        }
+
+    </style>
+</head>
+<body>
+        <div>
+
+            <img src="https://as1.ftcdn.net/v2/jpg/06/16/46/46/1000_F_616464678_mHXKqTpSn0QTT4JoU3H4vkErgxtP60mF.jpg">
+
+            <div id="curtain"></div>
+            <div id="left-door"> </div>
+            <div id="right-door"></div>
+        </div>
+      
+</body>
+</html>
